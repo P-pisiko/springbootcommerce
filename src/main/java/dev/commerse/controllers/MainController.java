@@ -1,6 +1,5 @@
 package dev.commerse.controllers;
 
-import dev.commerse.beans.Item;
 import dev.commerse.database.DatabaseAccess;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,9 +15,21 @@ public class MainController {
     @GetMapping("/")
     public String index(Model model) {
 
-        System.out.println(db.getItemsList());
         model.addAttribute("itemList", db.getItemsList());
-        return  "home";
+        return "landingPage";
     }
+
+    @GetMapping("/login")
+    public String login(Model model) {
+        return "login";
+    }
+
+    @GetMapping("/signup")
+    public String signup(Model model) {
+        return "signup";
+    }
+
+
+
 
 }
