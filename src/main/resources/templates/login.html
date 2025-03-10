@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <style>
         /* CSS Animations */
-
         .input-field {
             transition: transform 0.3s ease-in-out;
         }
 
         .input-field:focus {
-
             border-color: #e3543d;
         }
 
         .submit-button:hover {
             background-color: #BE3144;
         }
-
     </style>
 </head>
 <body class="bg-gradient-to-r from-[#09122C] to-[#872341] flex justify-center items-center h-screen">
@@ -31,21 +28,24 @@
     <form>
         <!-- Username Field -->
         <div class="mb-4">
-            <label for="username" class="block text-[#09122C] text-sm font-semibold mb-2">Username</label>
+            <label for="username" class="block text-[#09122C] text-md font-semibold mb-2">Username</label>
             <input id="username" type="text" class="input-field w-full px-4 py-2 border border-[#E17564] rounded-lg focus:outline-none focus:ring-2" autocomplete="off" placeholder="username" required>
         </div>
 
         <!-- Password Field -->
         <div class="mb-6">
-            <label for="password" class="block text-[#09122C] text-sm font-semibold mb-2">Password</label>
+            <label for="password" class="block text-[#09122C] text-md font-semibold mb-2">Password</label>
             <input id="password" type="password" class="input-field w-full px-4 py-2 border border-[#E17564] rounded-lg focus:outline-none focus:ring-2" autocomplete="off" placeholder="password" required>
         </div>
 
-        <a href="/signup">Sign up?</a>
+        <div class="mb-8">
+            <a href="/"class="font-semibold">Home</a><br>
+            <a href="/signup" class="font-semibold">Sign Up ?</a>
+        </div>
 
         <!-- Submit Button -->
         <div class="flex justify-center">
-            <button type="submit" class="submit-button w-full py-2 bg-[#BE3144] text-white font-semibold rounded-lg hover:bg-[#CE4255] focus:outline-none focus:ring-2 focus:ring-[#BE3144]">
+            <button type="submit" class="submit-button w-full py-2 bg-[#BE3144] text-white font-semibold rounded-lg hover:bg-black-500 focus:outline-none focus:ring-2 focus:ring-[#BE3144]">
                 Login
             </button>
         </div>
