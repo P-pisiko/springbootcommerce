@@ -6,17 +6,8 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* CSS Animations */
-        .input-field {
-            transition: transform 0.3s ease-in-out;
-        }
-
         .input-field:focus {
             border-color: #e3543d;
-        }
-
-        .submit-button:hover {
-            background-color: #BE3144;
         }
     </style>
 </head>
@@ -25,7 +16,7 @@
 <div class="form-container bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
     <h2 class="text-3xl font-semibold text-center mb-6 text-[#09122C]">Login</h2>
 
-    <form>
+    <form method="post">
         <!-- Username Field -->
         <div class="mb-4">
             <label for="username" class="block text-[#09122C] text-md font-semibold mb-2">Username</label>
@@ -45,7 +36,7 @@
 
         <!-- Submit Button -->
         <div class="flex justify-center">
-            <button type="submit" class="submit-button w-full py-2 bg-[#BE3144] text-white font-semibold rounded-lg hover:bg-black-500 focus:outline-none focus:ring-2 focus:ring-[#BE3144]">
+            <button type="submit" class="submit-button w-full py-2 bg-[#BE3144] text-white font-semibold rounded-lg hover:bg-[#CE4255] focus:outline-none focus:ring-2 focus:ring-[#BE3144]">
                 Login
             </button>
         </div>
