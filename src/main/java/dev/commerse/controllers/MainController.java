@@ -19,15 +19,25 @@ public class MainController {
         return "landingPage";
     }
 
-    @GetMapping("/login")
+   /*  @GetMapping("/login")
     public String login(Model model) {
+        model.addAttribute("loginForm", new Customer());
+
         return "login";
+    }
+
+   @PostMapping("/api/login")
+        public String loginPost(@ModelAttribute("loginForm") Customer customer, Model model)  {
+        System.out.println(customer.toString());
+        model.addAttribute("username", customer.getUsername());
+        return "/landingPage";
     }
 
     @GetMapping("/signup")
     public String signup(Model model) {
         return "signup";
-    }
+    }*/
+
 
 
 

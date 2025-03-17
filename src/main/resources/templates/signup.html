@@ -3,44 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signup</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .input-field:focus {
-      border-color: #e3543d;
-    }
-  </style>
+  <title>Login Page</title>
+  <link href="/style.css" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-r from-[#09122C] to-[#872341] flex justify-center items-center h-screen">
+<body class="h-screen w-full flex">
+<!-- Left Side (Form Section) -->
+<div class="w-2/4 flex flex-col justify-center items-center p-8 bg-gradient-to-r from-[#09122c] to-[#872341]">
+  <div class=" p-8 rounded-lg shadow-2xl w-full max-w-md">
+    <h2 class="text-3xl font-semibold text-left mb-6 text-white">Sign Up</h2>
 
-<div class="form-container bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
-  <h2 class="text-3xl font-semibold text-center mb-6 text-[#09122C]">Sign Up</h2>
+    <form method="post">
+      <!-- Username Field -->
+      <div class="mb-4 ">
+        <input name="username" type="text" class="text-white bg-[#09122c73] input-field w-full px-4 py-2 border
+        transition-all duration-200 border-[#8723418a] rounded-2xl hover:border-[#83344b] focus:border-[#b14564]
+        focus:outline-none" autocomplete="off" placeholder="Username *" required>
+      </div>
 
-  <form>
-    <!-- Username Field -->
-    <div class="mb-4">
-      <label for="username" class="block text-[#09122C] text-md font-semibold mb-2">Username <span style="color: red">*</span></label>
-      <input id="username" type="text" class="input-field w-full px-4 py-2 border border-[#E17564] rounded-lg focus:outline-none focus:ring-2" autocomplete="off" placeholder="username" required>
-    </div>
+      <!-- Password Field -->
+      <div class="mb-4">
+        <input name="password" type="password" class="text-white bg-[#09122c73] input-field w-full px-4 py-2 border
+        transition-all duration-200 border-[#8723418a] rounded-2xl hover:border-[#83344b] focus:border-[#b14564]
+        focus:outline-none" autocomplete="off" placeholder="Password *" required>
+      </div>
 
-    <!-- Password Field -->
-    <div class="mb-6">
-      <label for="password" class="block text-[#09122C] text-md font-semibold mb-2">Password <span style="color: red">*</span></label>
-      <input id="password" type="password" class="input-field w-full px-4 py-2 border border-[#E17564] rounded-lg focus:outline-none focus:ring-2" autocomplete="off" placeholder="password" required>
-    </div>
+      <div class="mb-4">
+        <input name="password_repeat" type="password" class="text-white bg-[#09122c73] input-field w-full px-4 py-2 border
+        transition-all duration-200 border-[#8723418a] rounded-2xl hover:border-[#83344b] focus:border-[#b14564]
+        focus:outline-none" autocomplete="off" placeholder="Password *" required>
+      </div>
 
-    <div class="mb-8">
-      <a href="/"class="font-semibold">Home</a><br>
-    </div>
+      <div class="mb-2 text-right">
+        <a href="/" class="font-semibold text-md text-[#f1bc4a]">Home</a><br>
+      </div>
+      <div class="mb-8 text-right">
+        <a href="/login" class="font-semibold text-md text-[#f1bc4a]">Log In</a><br>
+      </div>
 
-    <!-- Submit Button -->
-    <div class="flex justify-center">
-      <button type="submit" class="submit-button w-full py-2 bg-[#BE3144] text-white font-semibold rounded-lg hover:bg-[#CE4255] focus:outline-none focus:ring-2 focus:ring-[#BE3144]">
-        Signup
-      </button>
-    </div>
-  </form>
+      <!-- Submit Button -->
+      <div class="flex justify-center">
+        <button type="submit" class="submit-button w-full py-2 bg-[#BE3144] text-white font-semibold rounded-3xl transition-all duration-300
+        hover:bg-[#CE4255] focus:outline-none focus:ring-2 focus:ring-[#BE3144]">
+          Sign Up
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
 
+<div class="w-2/4" >
+  <video autoplay muted loop class="w-full h-full object-cover">
+    <source src="/assets/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 </body>
 </html>

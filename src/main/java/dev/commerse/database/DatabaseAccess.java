@@ -1,9 +1,8 @@
 package dev.commerse.database;
 
 
-import dev.commerse.beans.Item;
+import dev.commerse.models.Item;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 

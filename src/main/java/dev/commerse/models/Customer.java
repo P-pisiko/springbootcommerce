@@ -1,4 +1,4 @@
-package dev.commerse.beans;
+package dev.commerse.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,6 +16,7 @@ public class Customer {
     private String username;
     private String password;
     private String pgp_public;
+    private String role;
     private LocalDateTime last_login;
     private LocalDateTime created_at;
 }

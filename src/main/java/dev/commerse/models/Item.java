@@ -1,4 +1,4 @@
-package dev.commerse.beans;
+package dev.commerse.models;
 
 
 import lombok.AllArgsConstructor;

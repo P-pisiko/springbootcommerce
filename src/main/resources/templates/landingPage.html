@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <style>
         /* Custom CSS for animations */
         .hover-scale {
@@ -34,7 +34,6 @@
                     <button>Button 4</button>
                 </a>
             </div>
-
 
             <h2 class="text-xl font-bold justify-center">MARKET NAME</h2>
 
@@ -68,6 +67,10 @@
             Search
         </button>
     </form>
+</div>
+
+<div th:unless="${username} == null" class="box-content max-w-2/4">
+    <h1 th:text="'Hello' + ${username}"></h1>
 </div>
 
 <!-- PRODUCTS GRID -->
@@ -109,7 +112,7 @@
             <div class="text-center mb-4 md:mb-0">
                 <span class="text-2xl font-bold">MARKET NAME</span>
                 <p class="text-sm text-gray-300 mt-2">
-                    © 2023 All Rights Reserved
+                    © Yasal bilmemneler
                 </p>
             </div>
 
