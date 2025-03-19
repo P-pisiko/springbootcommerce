@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/public/style.css">
     <style>
         /* Custom CSS for animations */
         .hover-scale {
@@ -41,10 +41,10 @@
                 <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors">
                     <button>Button5</button>
                 </a>
-                <a href="/login" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors">
+                <a th:href="@{/auth/login}" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors">
                     <button>Login</button>
                 </a>
-                <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors">
+                <a th:href="@{/logout}" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors">
                     <button>Button5</button>
                 </a>
                 <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors">
@@ -68,6 +68,11 @@
         </button>
     </form>
 </div>
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Logout" />
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+</form>
 
 <div th:unless="${username} == null" class="box-content max-w-2/4">
     <h1 th:text="'Hello' + ${username}"></h1>

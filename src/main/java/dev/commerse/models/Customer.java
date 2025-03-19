@@ -3,7 +3,7 @@ package dev.commerse.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+import lombok.NonNull;
 
 
 import java.time.LocalDateTime;
@@ -13,7 +13,9 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Customer {
     private int customerID;
+    @NonNull
     private String username;
+    @NonNull
     private String password;
     private String pgp_public;
     private String role;

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html >
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
-  <link href="/style.css" rel="stylesheet">
+  <link href="/public/style.css" rel="stylesheet">
 </head>
 <body class="h-screen w-full flex">
 <!-- Left Side (Form Section) -->
@@ -12,23 +12,23 @@
   <div class=" p-8 rounded-lg shadow-2xl w-full max-w-md">
     <h2 class="text-3xl font-semibold text-left mb-6 text-white">Sign Up</h2>
 
-    <form method="post">
+    <form method="post" th:action="@{/auth/signup}" th:object="${customer}">
       <!-- Username Field -->
       <div class="mb-4 ">
-        <input name="username" type="text" class="text-white bg-[#09122c73] input-field w-full px-4 py-2 border
+        <input th:field="*{username}" type="text" class="text-white bg-[#09122c73] input-field w-full px-4 py-2 border
         transition-all duration-200 border-[#8723418a] rounded-2xl hover:border-[#83344b] focus:border-[#b14564]
         focus:outline-none" autocomplete="off" placeholder="Username *" required>
       </div>
 
       <!-- Password Field -->
       <div class="mb-4">
-        <input name="password" type="password" class="text-white bg-[#09122c73] input-field w-full px-4 py-2 border
+        <input th:field="*{password}" type="password" class="text-white bg-[#09122c73] input-field w-full px-4 py-2 border
         transition-all duration-200 border-[#8723418a] rounded-2xl hover:border-[#83344b] focus:border-[#b14564]
         focus:outline-none" autocomplete="off" placeholder="Password *" required>
       </div>
 
       <div class="mb-4">
-        <input name="password_repeat" type="password" class="text-white bg-[#09122c73] input-field w-full px-4 py-2 border
+        <input th:field="*{confirm}" type="password" class="text-white bg-[#09122c73] input-field w-full px-4 py-2 border
         transition-all duration-200 border-[#8723418a] rounded-2xl hover:border-[#83344b] focus:border-[#b14564]
         focus:outline-none" autocomplete="off" placeholder="Password *" required>
       </div>
@@ -52,10 +52,12 @@
 </div>
 
 <div class="w-2/4" >
+  <!--
   <video autoplay muted loop class="w-full h-full object-cover">
     <source src="/assets/video.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+  -->
 </div>
 </body>
 </html>
