@@ -36,7 +36,6 @@ public class AuthController {
 
     @PostMapping("/auth/signup")
     public String register(@Validated @ModelAttribute("customer") NewCustomerRequestDTO registerForm , BindingResult bindingResult ) {
-        logger.warn(registerForm.toString());
 
         if (!bindingResult.hasErrors()) {
             logger.warn("Binding has no errors");
